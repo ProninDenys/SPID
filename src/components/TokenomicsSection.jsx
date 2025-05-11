@@ -1,6 +1,11 @@
 // src/components/TokenomicsSection.jsx
 import { Title, Text, Paper, Grid, ThemeIcon } from '@mantine/core';
-import { IconCoin } from '@tabler/icons-react';
+import {
+  IconCoin,
+  IconUsers,
+  IconArrowUpRight,
+  IconCoins
+} from '@tabler/icons-react';
 
 export default function TokenomicsSection() {
   return (
