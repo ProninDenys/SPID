@@ -13,7 +13,7 @@ export default function TechnologySection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="blue">
-              <IconServer size="1.5rem" />
+              <IconServer size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Blockchain Infrastructure</Title>
             <Text c="dimmed" fz="sm">
