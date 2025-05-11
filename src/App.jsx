@@ -1,8 +1,8 @@
 // src/App.jsx
+import Header from './components/Header.jsx';
 import React from 'react';
 import StarsBackground from './components/StarsBackground.jsx';
 import LayoutWrapper from './components/LayoutWrapper.jsx';
-import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Benefits from './components/Benefits.jsx';
 import MissionSection from './components/MissionSection.jsx';

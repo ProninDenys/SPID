@@ -1,48 +1,32 @@
-// src/components/Header.jsx
-import { Link } from 'react-scroll';
-import { FaTwitter, FaTelegramPlane } from 'react-icons/fa';
+import { IconBrandTwitter, IconBrandTelegram } from '@tabler/icons-react';
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#0d0d2b]/80 backdrop-blur-md border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-[#0d0d2b] to-[#141432] backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* LOGO */}
-        <a href="#top" className="text-white text-xl font-bold hover:text-blue-400 transition">
-          🚀 SpaceID
+        {/* Логотип */}
+        <a href="#top" className="text-white text-lg font-bold flex items-center gap-2">
+          🚀 <span className="hover:text-blue-400 transition">SpaceID</span>
         </a>
 
-        {/* NAVIGATION */}
-        <nav className="hidden md:flex space-x-6">
-          <Link to="mission" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            Mission
-          </Link>
-          <Link to="benefits" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            Benefits
-          </Link>
-          <Link to="tokenomics" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            Tokenomics
-          </Link>
-          <Link to="technology" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            Technology
-          </Link>
-          <Link to="partners" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            Partners
-          </Link>
-          <Link to="faq" smooth duration={500} className="text-white hover:text-blue-400 cursor-pointer">
-            FAQ
-          </Link>
-          <Link to="cta" smooth duration={500} className="text-blue-400 font-semibold cursor-pointer">
-            Buy Token
-          </Link>
+        {/* Навигация */}
+        <nav className="hidden md:flex gap-6 text-white font-medium text-sm">
+          <a href="#mission" className="hover:text-blue-400 transition">Mission</a>
+          <a href="#benefits" className="hover:text-blue-400 transition">Benefits</a>
+          <a href="#tokenomics" className="hover:text-blue-400 transition">Tokenomics</a>
+          <a href="#technology" className="hover:text-blue-400 transition">Technology</a>
+          <a href="#partners" className="hover:text-blue-400 transition">Partners</a>
+          <a href="#faq" className="hover:text-blue-400 transition">FAQ</a>
+          <a href="#cta" className="text-blue-400 font-semibold hover:underline">Buy Token</a>
         </nav>
 
-        {/* SOCIAL ICONS */}
-        <div className="flex space-x-4">
+        {/* Соцсети */}
+        <div className="flex gap-4 items-center">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400">
-            <FaTwitter size={18} />
+            <IconBrandTwitter size={20} />
           </a>
           <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400">
-            <FaTelegramPlane size={18} />
+            <IconBrandTelegram size={20} />
           </a>
         </div>
       </div>
