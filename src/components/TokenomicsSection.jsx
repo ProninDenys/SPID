@@ -18,7 +18,7 @@ export default function TokenomicsSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="green">
-              <IconCoins size="1.5rem" />
+              <IconCoins size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Total Supply</Title>
             <Text c="dimmed" fz="sm">
@@ -30,7 +30,7 @@ export default function TokenomicsSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="orange">
-              <IconCoin size="1.5rem" />
+              <IconCoin size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Token Distribution</Title>
             <Text c="dimmed" fz="sm">
@@ -42,7 +42,7 @@ export default function TokenomicsSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="cyan">
-              <IconUsers size="1.5rem" />
+              <IconUsers size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Governance Utility</Title>
             <Text c="dimmed" fz="sm">
@@ -54,7 +54,7 @@ export default function TokenomicsSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="violet">
-              <IconArrowUpRight size="1.5rem" />
+              <IconArrowUpRight size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Staking & Rewards</Title>
             <Text c="dimmed" fz="sm">
