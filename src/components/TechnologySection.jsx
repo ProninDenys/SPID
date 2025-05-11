@@ -25,7 +25,7 @@ export default function TechnologySection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="blue">
-              <IconApi size="1.5rem" />
+              <IconApi size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Real-time API Access</Title>
             <Text c="dimmed" fz="sm">
@@ -37,7 +37,7 @@ export default function TechnologySection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="blue">
-              <IconShieldLock size="1.5rem" />
+              <IconShieldLock size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">Military-grade Security</Title>
             <Text c="dimmed" fz="sm">
@@ -49,7 +49,7 @@ export default function TechnologySection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="blue">
-              <IconPlanet size="1.5rem" />
+              <IconPlanet size={24} />
             </ThemeIcon>
             <Title order={4} mt="md">NASA-Inspired Architecture</Title>
             <Text c="dimmed" fz="sm">
