@@ -1,15 +1,128 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SpaceID (SPID) — Token for Space Data</title>
+    <title>SpaceID (SPID) — Explore the Cosmos</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+  <body class="bg-black text-white relative font-sans">
+    <!-- Stars Background -->
+    <div id="stars"></div>
+
+    <!-- Header -->
+    <header class="w-full z-50 bg-[#0d0d2b]/90 backdrop-blur border-b border-white/10 shadow-md">
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <a href="#top" class="text-blue-400 font-bold text-xl">🚀 SpaceID</a>
+        <nav class="flex flex-wrap justify-center gap-6 text-sm mt-2 md:mt-0">
+          <a href="#mission" class="hover:text-blue-400">Mission</a>
+          <a href="#benefits" class="hover:text-blue-400">Benefits</a>
+          <a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a>
+          <a href="#technology" class="hover:text-blue-400">Technology</a>
+          <a href="#faq" class="hover:text-blue-400">FAQ</a>
+          <a href="#cta" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow ml-2">
+            Buy Token
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="top" class="hero pt-32 pb-16 text-center">
+      <div class="container mx-auto px-4">
+        <h1>SpaceID (SPID)</h1>
+        <p>Explore the Universe of Data. Invest in the Space-Powered Future.</p>
+        <a href="#cta" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow">
+          Buy SPID Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p class="text-center max-w-2xl mx-auto">
+        We’re bringing space data to the blockchain. Inspired by NASA, our goal is to make celestial insights accessible, secure, and decentralized for everyone on Earth.
+      </p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+      <h2>Why Choose SPID?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card">Real-Time Space Data from telescopes & satellites</div>
+        <div class="card">Community Governance with on-chain proposals</div>
+        <div class="card">AI-Powered Indexing of astronomical databases</div>
+        <div class="card">Academic & NASA-based Partnerships</div>
+      </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics">
+      <h2>Tokenomics</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card">Total Supply: 1,000,000,000 SPID (Fixed)</div>
+        <div class="card">Distribution: 40% Community, 25% Dev, 20% Treasury, 10% Team, 5% Advisors</div>
+        <div class="card">Governance: Voting on missions, upgrades, access</div>
+        <div class="card">Staking: Earn while helping space indexing</div>
+      </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+      <h2>Technology</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card">Blockchain Infrastructure & Real-Time APIs</div>
+        <div class="card">End-to-End Encryption & Web3 Auth</div>
+        <div class="card">Open-source Tools Inspired by NASA</div>
+        <div class="card">AI Search for Planetary Archives</div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is SPID?</summary><p>SPID is a token giving access to blockchain-based space data.</p></details>
+        <details class="faq-item"><summary>Is SPID backed by NASA?</summary><p>No, but our tech is inspired by public NASA infrastructure.</p></details>
+        <details class="faq-item"><summary>How can I buy SPID?</summary><p>Click the “Buy Token” button or visit our Telegram.</p></details>
+        <details class="faq-item"><summary>Can I earn rewards?</summary><p>Yes, through staking and contribution to missions.</p></details>
+        <details class="faq-item"><summary>Is this a real project?</summary><p>Yes. Our mission is to support scientific space exploration.</p></details>
+        <details class="faq-item"><summary>How do I join?</summary><p>Follow us on Twitter or Telegram and engage with the community.</p></details>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta">
+      <h2>Ready to Launch?</h2>
+      <p>Join the mission. Explore the stars with SPID.</p>
+      <button>Buy Token</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SpaceID (SPID). Powered by space data. Inspired by NASA.</p>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://t.me" target="_blank">Telegram</a>
+        <a href="#top" class="hover:underline">↑ Back to top</a>
+      </div>
+    </footer>
+
+    <!-- Flowbite Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -2,15 +2,12 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "#0d0d2b",
-        primary: "#00ccff",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
