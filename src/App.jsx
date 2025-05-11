@@ -8,6 +8,7 @@ import PartnersSection from './components/PartnersSection.jsx';
 import FaqSection from './components/faqSection.jsx';
 import CallToActionSection from './components/CallToActionSection.jsx';
 import Footer from './components/Footer.jsx';
+import TechnologySection from './components/TechnologySection.jsx';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <MissionSection />
       <Benefits />
       <TokenomicsSection />
+      <TechnologySection />
       <PartnersSection />
       <FaqSection />
       <CallToActionSection />
