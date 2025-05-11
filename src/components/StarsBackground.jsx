@@ -1,11 +1,10 @@
-// src/components/StarsBackground.jsx
 import { useCallback } from "react";
-import Particles from "@tsparticles/react";
-import { tsParticles } from "@tsparticles/engine";
+import { loadFull } from "@tsparticles/engine";
+import { Particles } from "@tsparticles/react";
 
 export default function StarsBackground() {
   const particlesInit = useCallback(async (engine) => {
-    await tsParticles.load("tsparticles", {}); // если хочешь, можешь кастомизировать
+    await loadFull(engine);
   }, []);
 
   return (
