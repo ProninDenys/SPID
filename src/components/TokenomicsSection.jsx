@@ -1,6 +1,6 @@
 // src/components/TokenomicsSection.jsx
 import { Title, Text, Paper, Grid, ThemeIcon } from '@mantine/core';
-import { IconCoins, IconPieChart, IconUsers, IconArrowUpRight } from '@tabler/icons-react';
+import { IconCoin } from '@tabler/icons-react';
 
 export default function TokenomicsSection() {
   return (
@@ -25,7 +25,7 @@ export default function TokenomicsSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Paper p="md" radius="md" shadow="sm" withBorder>
             <ThemeIcon size="lg" radius="xl" variant="light" color="orange">
-              <IconPieChart size="1.5rem" />
+              <IconCoin size="1.5rem" />
             </ThemeIcon>
             <Title order={4} mt="md">Token Distribution</Title>
             <Text c="dimmed" fz="sm">
