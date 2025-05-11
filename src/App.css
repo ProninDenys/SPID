@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* === Основные стили фона и текста === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d2b;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* === Светящиеся заголовки === */
+h1, h2, h3 {
+  text-shadow: 0 0 10px rgba(0, 153, 255, 0.7), 0 0 20px rgba(0, 153, 255, 0.5);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* === Пространство для секций === */
+section {
+  padding: 4rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* === Эффект параллакса (опционально) === */
+.parallax {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* === Светящийся курсор === */
+body::before {
+  content: "";
+  position: fixed;
+  top: var(--cursor-y);
+  left: var(--cursor-x);
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #00ffff, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  filter: blur(4px);
+}
+
+/* === Пульсирующая радиальная вспышка вокруг элементов === */
+.pulse-glow {
+  position: relative;
+}
+
+.pulse-glow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 183, 255, 0.15), transparent);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
