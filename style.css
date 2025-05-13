@@ -250,3 +250,18 @@ button[type="submit"]:hover {
     padding: 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  footer .md\\:text-right {
+    text-align: center !important;
+  }
+
+  footer ul,
+  footer .mt-4,
+  footer .mt-3 {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
