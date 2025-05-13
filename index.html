@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpaceID (SPID)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Orbitron', sans-serif; background-color: #000; color: #fff; }
     #stars-bg {
       position: fixed;
       width: 100%;
@@ -18,8 +18,8 @@
     }
   </style>
 </head>
-<body>
 
+<body class="font-[Orbitron]">
   <!-- Star Background -->
   <div id="stars-bg"></div>
   <script>
@@ -37,267 +37,357 @@
 
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
       <h1 class="text-xl font-bold text-white tracking-widest">SPACEID</h1>
-      <nav class="hidden md:flex items-center space-x-6 text-sm">
-        <a href="#hero" class="text-gray-300 hover:text-white transition">Home</a>
-        <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
-        <a href="#tokenomics" class="text-gray-300 hover:text-white transition">Tokenomics</a>
-        <a href="#roadmap" class="text-gray-300 hover:text-white transition">Roadmap</a>
-        <a href="#team" class="text-gray-300 hover:text-white transition">Team</a>
-        <a href="#faq" class="text-gray-300 hover:text-white transition">FAQ</a>
-        <a href="#whitepaper" class="text-gray-300 hover:text-white transition">Whitepaper</a>
+      <nav class="hidden md:flex items-center space-x-6 text-base">
+        <a href="#hero" class="text-gray-300 hover:text-blue-400 transition">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-blue-400 transition">About</a>
+        <a href="#tokenomics" class="text-gray-300 hover:text-blue-400 transition">Tokenomics</a>
+        <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition">Roadmap</a>
+        <a href="#team" class="text-gray-300 hover:text-blue-400 transition">Team</a>
+        <a href="#faq" class="text-gray-300 hover:text-blue-400 transition">FAQ</a>
+        <a href="#whitepaper" class="text-gray-300 hover:text-blue-400 transition">Whitepaper</a>
       </nav>
-      <div class="hidden md:flex space-x-3">
-        <a href="https://example.com/buy" target="_blank" class="px-4 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200 transition">Buy Token</a>
-        <a href="https://t.me/spaceidcommunity" target="_blank" class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition">Join Community</a>
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://twitter.com/yourproject" target="_blank"
+          class="text-white hover:text-blue-400 transition text-sm font-medium">Twitter</a>
+        <a href="https://example.com/buy" target="_blank"
+          class="px-5 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
+          Buy Token
+        </a>
+        <a href="https://t.me/spaceidcommunity" target="_blank"
+          class="px-5 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
+          Join Community
+        </a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-32 text-center">
+  <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-32 text-center bg-black">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight text-white">
-        Data From Space.<br>
-        <span class="text-blue-400">Accessible to All.</span>
+      <h2 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight text-blue-400">
+        Real Space Data.<br>
+        <span class="text-white">Accessible. Immutable. Yours.</span>
       </h2>
       <p class="text-gray-400 text-lg md:text-xl mb-8">
-        SpaceID bridges the gap between public space data and developers, scientists, and global citizens.
+        SpaceID makes public mission data universally accessible via blockchain. Search, analyze, build — without
+        limits.
       </p>
-      <a href="#tokenomics" class="inline-block px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition">
+      <a href="#tokenomics"
+        class="inline-block px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
         Explore Tokenomics
       </a>
     </div>
   </section>
 
   <!-- About Section -->
-<section id="about" class="py-24 px-6 bg-black text-white">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-white">About the Project</h2>
-    <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-      SpaceID provides decentralized access to space mission datasets, enabling innovation in science, research and open data systems.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-white">The Problem</h3>
-        <p class="text-gray-300">
-          Publicly-funded space missions produce vast amounts of valuable data, but this information is difficult to access, scattered across agencies, or locked behind restrictions. Innovation stalls when data is hidden.
-        </p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-white">The Solution</h3>
-        <p class="text-gray-300">
-          SpaceID creates a unified, blockchain-powered protocol for structured, permissionless access to historical and live mission data. Powered by SPID token, it enables indexing, staking, and global participation.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Tokenomics Section -->
-<section id="tokenomics" class="py-24 px-6 bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6">Tokenomics</h2>
-    <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-      SPID is built to ensure sustainability, incentivize participation, and reward contributors who keep the data flowing.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-      <!-- Distribution List -->
-      <div class="text-left">
-        <h3 class="text-xl font-medium mb-4 text-white">Token Distribution</h3>
-        <ul class="space-y-2 text-gray-300">
-          <li><strong class="text-blue-400">40%</strong> — Ecosystem & Staking</li>
-          <li><strong class="text-blue-400">20%</strong> — Core Team</li>
-          <li><strong class="text-blue-400">15%</strong> — Strategic Partnerships</li>
-          <li><strong class="text-blue-400">10%</strong> — Public Sale</li>
-          <li><strong class="text-blue-400">10%</strong> — Treasury</li>
-          <li><strong class="text-blue-400">5%</strong> — Advisors</li>
-        </ul>
-      </div>
-
-      <!-- Pie Chart -->
-      <div class="flex justify-center">
-        <img src="https://quickchart.io/chart?c={type:'doughnut',data:{labels:['Ecosystem','Team','Partnerships','Public Sale','Treasury','Advisors'],datasets:[{data:[40,20,15,10,10,5],backgroundColor:['#1E90FF','#6b7280','#2563eb','#3b82f6','#1e3a8a','#60a5fa']}]}}" alt="Token Distribution" class="w-full max-w-xs rounded border border-white shadow-xl">
+  <section id="about" class="py-16 px-6 bg-black text-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-blue-400">About the Project</h2>
+      <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+        SpaceID provides decentralized access to space mission datasets, enabling innovation in science, research and
+        open data systems.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-white">The Problem</h3>
+          <p class="text-gray-300">
+            Publicly-funded space missions produce vast amounts of valuable data, but this information is difficult to
+            access, scattered across agencies, or locked behind restrictions. Innovation stalls when data is hidden.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-white">The Solution</h3>
+          <p class="text-gray-300">
+            SpaceID creates a unified, blockchain-powered protocol for structured, permissionless access to historical
+            and live mission data. Powered by SPID token, it enables indexing, staking, and global participation.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
+    <!-- Tokenomics Section -->
+  <section id="tokenomics" class="py-24 px-6 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Tokenomics</h2>
+      <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+        SPID is built to ensure sustainability, incentivize participation, and reward contributors who keep the data
+        flowing.
+      </p>
 
-    <!-- Fund Allocation -->
-    <div class="text-left mt-12">
-      <h3 class="text-xl font-medium mb-4 text-center text-white">Fund Allocation</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-black border border-gray-700 p-4 rounded">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-semibold mb-10 text-blue-400">Token Distribution</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">40%</strong> — Ecosystem & Staking</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">20%</strong> — Core Team</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">15%</strong> — Strategic Partnerships</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Public Sale</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Treasury</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">5%</strong> — Advisors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Fund Allocation Section -->
+  <section id="fund-allocation" class="py-24 px-6 bg-black text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-10 text-center text-blue-400">Fund Allocation</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+        <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
           <p class="text-gray-300"><strong class="text-blue-400">50%</strong> — Development & Engineering</p>
         </div>
-        <div class="bg-black border border-gray-700 p-4 rounded">
+        <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
           <p class="text-gray-300"><strong class="text-blue-400">20%</strong> — Research & Data Acquisition</p>
         </div>
-        <div class="bg-black border border-gray-700 p-4 rounded">
+        <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
           <p class="text-gray-300"><strong class="text-blue-400">15%</strong> — Community & Growth</p>
         </div>
-        <div class="bg-black border border-gray-700 p-4 rounded">
-          <p class="text-gray-300"><strong class="text-blue-400">10%</strong> — Legal & Security</p>
+        <div class="col-span-3 flex flex-col md:flex-row justify-center gap-6 mt-6">
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300"><strong class="text-blue-400">10%</strong> — Legal & Security</p>
+          </div>
+          <div class="w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Reserves</p>
+          </div>
         </div>
-        <div class="bg-black border border-gray-700 p-4 rounded">
-          <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Reserves</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Roadmap Section -->
+  <section id="roadmap" class="py-20 px-6 bg-black text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Roadmap</h2>
+      <p class="text-lg text-gray-400 mb-12">
+        A transparent development path. Data-first, user-focused.
+      </p>
+      <div class="space-y-12 border-l border-gray-700 pl-6 text-left">
+        <div>
+          <h3 class="text-xl font-semibold text-white">Q2 2025 — Genesis Launch</h3>
+          <p class="text-gray-400">Token deployment, first NASA dataset integration, and validator network alpha.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white">Q3 2025 — Staking & Community</h3>
+          <p class="text-gray-400">Staking program launch, open validator program, and first governance vote.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white">Q4 2025 — Research Integration</h3>
+          <p class="text-gray-400">Developer SDK, institutional research access, and academic partnerships.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white">2026 — Global Access</h3>
+          <p class="text-gray-400">Satellite index expansion, multi-language portal, and data marketplaces.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+    <!-- Team Section -->
+  <section id="team" class="py-20 px-6 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Team</h2>
+      <p class="text-lg text-gray-400 mb-12">
+        Engineers, scientists, and mission veterans from the edge of innovation.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg"
+            class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 1">
+          <h3 class="text-white font-semibold">John Maxwell</h3>
+          <p class="text-sm text-gray-400">Mission Director</p>
+        </div>
+        <div class="text-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg"
+            class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 2">
+          <h3 class="text-white font-semibold">Sarah Kwon</h3>
+          <p class="text-sm text-gray-400">Data Systems Lead</p>
+        </div>
+        <div class="text-center">
+          <img src="https://randomuser.me/api/portraits/men/76.jpg"
+            class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 3">
+          <h3 class="text-white font-semibold">Leo Takeda</h3>
+          <p class="text-sm text-gray-400">Infrastructure Architect</p>
+        </div>
+        <div class="text-center">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg"
+            class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 4">
+          <h3 class="text-white font-semibold">Eva Müller</h3>
+          <p class="text-sm text-gray-400">Security Advisor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Whitepaper CTA Section -->
+  <section id="whitepaper" class="py-20 px-6 bg-gray-900 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Whitepaper</h2>
+      <p class="text-lg text-gray-400 mb-8">
+        Read the full technical overview of the SpaceID protocol, architecture, and token model.
+      </p>
+      <a href="https://example.com/whitepaper.pdf" target="_blank"
+        class="inline-block px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition">
+        Download PDF
+      </a>
+    </div>
+  </section>
 
-<!-- Roadmap Section -->
-<section id="roadmap" class="py-24 px-6 bg-black text-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6">Roadmap</h2>
-    <p class="text-lg text-gray-400 mb-12">
-      A transparent development path. Data-first, user-focused.
-    </p>
+  <!-- Open Data Inspiration Section -->
+  <section id="inspiration" class="py-20 px-6 bg-black text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Supported by Open Missions</h2>
+      <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+        SpaceID is inspired by the open data ecosystems and standards pioneered by the following organizations.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+        <a href="https://nasa.gov" target="_blank" aria-label="NASA">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+            class="mx-auto h-12 hover:opacity-80 transition" alt="NASA">
+        </a>
+        <a href="https://esa.int" target="_blank" aria-label="ESA">
+          <img src="img/ESA_logo.png" class="mx-auto h-12 hover:opacity-80 transition" alt="ESA">
+        </a>
+        <a href="https://www.noaa.gov/" target="_blank" aria-label="NOAA">
+          <img src="img/3.svg" class="mx-auto h-12 hover:opacity-80 transition" alt="NOAA">
+        </a>
+        <a href="https://www.nationalgeographic.com" target="_blank" aria-label="National Geographic">
+          <img src="img/1.jpg.webp" class="mx-auto h-12 hover:opacity-80 transition" alt="National Geographic">
+        </a>
+        <a href="https://space.com" target="_blank" aria-label="Space.com">
+          <img src="img/233.jpg" class="mx-auto h-10 hover:opacity-80 transition" alt="Space.com">
+        </a>
+        <a href="https://mit.edu" target="_blank" aria-label="MIT">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg"
+            class="mx-auto h-8 hover:opacity-80 transition" alt="MIT">
+        </a>
+        <a href="https://ipfs.io" target="_blank" aria-label="IPFS">
+          <img src="img/54.png" class="mx-auto h-10 hover:opacity-80 transition" alt="IPFS">
+        </a>
+        <a href="https://ethereum.org" target="_blank" aria-label="Ethereum">
+          <img src="img/ethere.svg" class="mx-auto h-10 hover:opacity-80 transition" alt="Ethereum">
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <div class="space-y-12 border-l border-gray-700 pl-6">
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 px-6 bg-black text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">FAQ</h2>
+      <p class="text-lg text-gray-400 mb-12">Common questions about the SpaceID platform.</p>
+      <div class="space-y-4 text-left">
+        <details class="border border-gray-700 p-4 rounded">
+          <summary class="font-semibold cursor-pointer text-white">How do I buy SPID?</summary>
+          <p class="text-gray-400 mt-2">SPID will be available on selected launchpads and later on decentralized exchanges. Stay tuned to our updates.</p>
+        </details>
+        <details class="border border-gray-700 p-4 rounded">
+          <summary class="font-semibold cursor-pointer text-white">Is SPID a governance token?</summary>
+          <p class="text-gray-400 mt-2">Yes, SPID holders will vote on key protocol decisions, including data access models and network upgrades.</p>
+        </details>
+        <details class="border border-gray-700 p-4 rounded">
+          <summary class="font-semibold cursor-pointer text-white">What data can I access?</summary>
+          <p class="text-gray-400 mt-2">You can access satellite imagery, telemetry, scientific readings and archived mission reports.</p>
+        </details>
+        <details class="border border-gray-700 p-4 rounded">
+          <summary class="font-semibold cursor-pointer text-white">Do I need to stake SPID to access data?</summary>
+          <p class="text-gray-400 mt-2">Some datasets are free; others require staking or holding SPID depending on size, bandwidth, or recency.</p>
+        </details>
+        <details class="border border-gray-700 p-4 rounded">
+          <summary class="font-semibold cursor-pointer text-white">How secure is the platform?</summary>
+          <p class="text-gray-400 mt-2">All data is verified on-chain. Smart contracts are audited and stored redundantly via IPFS and nodes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-gray-800 py-10 px-6 text-white text-sm relative z-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+      <!-- Contact Form -->
       <div>
-        <h3 class="text-xl font-semibold text-white">Q2 2025 — Genesis Launch</h3>
-        <p class="text-gray-400">Token deployment, first NASA dataset integration, and validator network alpha.</p>
+        <h3 class="text-xl font-semibold mb-3 text-blue-400">Contact Us</h3>
+        <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3">
+          <input type="email" name="email" placeholder="Your Email" required
+            class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white" />
+          <textarea name="message" placeholder="Your Message" required
+            class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white"></textarea>
+          <button type="submit"
+            class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition">
+            Send
+          </button>
+          <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
+        </form>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold text-white">Q3 2025 — Staking & Community</h3>
-        <p class="text-gray-400">Staking program launch, open validator program, and first governance vote.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold text-white">Q4 2025 — Research Integration</h3>
-        <p class="text-gray-400">Developer SDK, institutional research access, and academic partnerships.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold text-white">2026 — Global Access</h3>
-        <p class="text-gray-400">Satellite index expansion, multi-language portal, and data marketplaces.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Team Section -->
-<section id="team" class="py-24 px-6 bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6">Team</h2>
-    <p class="text-lg text-gray-400 mb-12">
-      Engineers, scientists, and mission veterans from the edge of innovation.
-    </p>
+      <!-- Links and Social -->
+      <div class="text-left md:text-right">
+        <h3 class="text-xl font-semibold mb-3 text-blue-400">Navigation</h3>
+        <ul class="space-y-1">
+          <li><a href="#hero" class="hover:text-blue-400">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-400">About</a></li>
+          <li><a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a></li>
+          <li><a href="#roadmap" class="hover:text-blue-400">Roadmap</a></li>
+          <li><a href="#team" class="hover:text-blue-400">Team</a></li>
+          <li><a href="#faq" class="hover:text-blue-400">FAQ</a></li>
+        </ul>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 1">
-        <h3 class="text-white font-semibold">John Maxwell</h3>
-        <p class="text-sm text-gray-400">Mission Director</p>
-      </div>
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 2">
-        <h3 class="text-white font-semibold">Sarah Kwon</h3>
-        <p class="text-sm text-gray-400">Data Systems Lead</p>
-      </div>
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/men/76.jpg" class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 3">
-        <h3 class="text-white font-semibold">Leo Takeda</h3>
-        <p class="text-sm text-gray-400">Infrastructure Architect</p>
-      </div>
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-20 h-20 mx-auto rounded-full border border-white mb-3" alt="Team 4">
-        <h3 class="text-white font-semibold">Eva Müller</h3>
-        <p class="text-sm text-gray-400">Security Advisor</p>
+        <div class="mt-4 space-x-3">
+          <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
+          <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
+        </div>
+
+        <div class="mt-3 space-x-3">
+          <a href="/ privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- FAQ Section -->
-<section id="faq" class="py-24 px-6 bg-black text-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6">FAQ</h2>
-    <p class="text-lg text-gray-400 mb-12">Common questions about the SpaceID platform.</p>
-
-    <div class="space-y-4 text-left">
-      <details class="border border-gray-700 p-4 rounded">
-        <summary class="font-semibold cursor-pointer text-white">How do I buy SPID?</summary>
-        <p class="text-gray-400 mt-2">SPID will be available on selected launchpads and later on decentralized exchanges. Stay tuned to our updates.</p>
-      </details>
-      <details class="border border-gray-700 p-4 rounded">
-        <summary class="font-semibold cursor-pointer text-white">Is SPID a governance token?</summary>
-        <p class="text-gray-400 mt-2">Yes, SPID holders will vote on key protocol decisions, including data access models and network upgrades.</p>
-      </details>
-      <details class="border border-gray-700 p-4 rounded">
-        <summary class="font-semibold cursor-pointer text-white">What data can I access?</summary>
-        <p class="text-gray-400 mt-2">You can access satellite imagery, telemetry, scientific readings and archived mission reports.</p>
-      </details>
-      <details class="border border-gray-700 p-4 rounded">
-        <summary class="font-semibold cursor-pointer text-white">Do I need to stake SPID to access data?</summary>
-        <p class="text-gray-400 mt-2">Some datasets are free; others require staking or holding SPID depending on size, bandwidth, or recency.</p>
-      </details>
-      <details class="border border-gray-700 p-4 rounded">
-        <summary class="font-semibold cursor-pointer text-white">How secure is the platform?</summary>
-        <p class="text-gray-400 mt-2">All data is verified on-chain. Smart contracts are audited and stored redundantly via IPFS and nodes.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- Whitepaper CTA Section -->
-<section id="whitepaper" class="py-24 px-6 bg-gray-900 text-white text-center">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6">Whitepaper</h2>
-    <p class="text-lg text-gray-400 mb-8">
-      Read the full technical overview of the SpaceID protocol, architecture, and token model.
-    </p>
-    <a href="https://example.com/whitepaper.pdf" target="_blank" class="inline-block px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition">
-      Download PDF
-    </a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-black border-t border-gray-800 py-12 px-6 text-white text-sm">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-    <!-- Contact Form -->
-    <div>
-      <h3 class="text-xl font-semibold mb-4 text-white">Contact Us</h3>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 bg-gray-900 border border-gray-700 rounded text-white" />
-        <textarea name="message" placeholder="Your Message" required class="w-full p-3 bg-gray-900 border border-gray-700 rounded h-32 text-white"></textarea>
-        <button type="submit" class="bg-white text-black font-bold py-2 px-6 rounded hover:bg-gray-200 transition">
-          Send
-        </button>
-        <p class="text-green-400 mt-2 hidden" id="success-msg">Message sent successfully!</p>
-      </form>
+    <!-- Центрированный копирайт -->
+    <div class="mt-6 flex justify-center">
+      <p class="text-gray-500 text-center text-sm">© 2025 SpaceID (SPID). All rights reserved.</p>
     </div>
 
-    <!-- Links and Social -->
-    <div class="text-center md:text-left">
-      <h3 class="text-xl font-semibold mb-4">Navigation</h3>
-      <ul class="space-y-2">
-        <li><a href="#hero" class="hover:text-blue-400">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-400">About</a></li>
-        <li><a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a></li>
-        <li><a href="#roadmap" class="hover:text-blue-400">Roadmap</a></li>
-        <li><a href="#team" class="hover:text-blue-400">Team</a></li>
-        <li><a href="#faq" class="hover:text-blue-400">FAQ</a></li>
-      </ul>
+    <!-- JS for showing success -->
+    <script>
+      const form = document.getElementById('contact-form');
+      const msg = document.getElementById('success-msg');
 
-      <div class="mt-6 space-x-4">
-        <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
-        <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
-      </div>
+      if (form) {
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          try {
+            const res = await fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
 
-      <div class="mt-4 space-x-4">
-        <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
-        <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-12 text-center text-gray-500">
-    © 2025 SpaceID (SPID). All rights reserved.
-  </div>
-</footer>
-
+            if (res.ok) {
+              msg.classList.remove('hidden');
+              form.reset();
+            } else {
+              alert('There was a problem sending your message.');
+            }
+          } catch (err) {
+            alert('Failed to connect. Please try again.');
+          }
+        });
+      }
+    </script>
+  </footer>
 </body>
 </html>
