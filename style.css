@@ -265,3 +265,8 @@ button[type="submit"]:hover {
     gap: 0.5rem;
   }
 }
+
+footer p {
+  width: 100%;
+  text-align: center !important;
+}
