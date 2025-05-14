@@ -16,45 +16,30 @@
       z-index: -1;
     }
 
-  details summary {
-  cursor: pointer;
-}
-
-details[open] > p {
-  animation: fadeDown 0.5s ease-in-out;
-}
-
-@keyframes fadeDown {
-  0% { opacity: 0; transform: translateY(-5px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-  .card-animated {
-  opacity: 5;
-  transform: translateY(40px);
-  transition: all 0.13s ease-out;
-}
-.card-animated.visible {
-  opacity: 5;
-  transform: translateY(0);
-}
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-5px);
+    details summary {
+      cursor: pointer;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    details[open]>p {
+      animation: fadeDown 0.5s ease-in-out;
     }
-  }
-  
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 
 <body class="font-[Orbitron]">
-  
+
   <!-- Mobile Navbar -->
   <div class="md:hidden fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
     <div class="flex items-center justify-between px-6 py-4">
@@ -78,10 +63,9 @@ details[open] > p {
       <a href="https://t.me/spaceidcommunity" target="_blank" class="block hover:text-blue-400">Join Community</a>
     </div>
   </div>
-
   <!-- Header for desktop -->
-  <header class="hidden md:block static top-40 left-0 w-full z-70 bg-black border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+  <header class="hidden md:block w-full z-70 bg-black border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
       <h1 class="text-xl font-bold text-white tracking-widest">SPACEID</h1>
       <nav class="flex items-center space-x-6 text-base">
         <a href="#hero" class="text-gray-300 hover:text-blue-400 transition">Home</a>
@@ -108,8 +92,8 @@ details[open] > p {
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="pt-16 md:pt-0 text-center bg-black min-h-screen flex items-center justify-center">
-  <div class="max-w-3xl mx-auto">
+  <section id="hero" class="bg-black py-16 text-center flex items-center justify-center">
+    <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight text-blue-400">
         Real Space Data.<br>
         <span class="text-white">Accessible. Immutable. Yours.</span>
@@ -126,8 +110,8 @@ details[open] > p {
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-12 px- bg-black text-white">
-  <div class="max-w-5xl mx-auto text-center">
+  <section id="about" class="bg-black py-16 px-6 text-white">
+    <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-blue-400">About the Project</h2>
       <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
         SpaceID provides decentralized access to space mission datasets, enabling innovation in science, research and
@@ -138,7 +122,7 @@ details[open] > p {
           <h3 class="text-xl font-semibold mb-4 text-white">The Problem</h3>
           <p class="text-gray-300">
             Publicly-funded space missions produce vast amounts of valuable data, but this information is difficult to
-            access, scattered across agencies, or locked behind restrictions. Innovation stalls when data is hidden.
+            access, scattered across agencies, or locked behind restrictions.
           </p>
         </div>
         <div>
@@ -152,66 +136,84 @@ details[open] > p {
     </div>
   </section>
   <!-- Tokenomics Section -->
-<section id="tokenomics" class="py-24 px-6 bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Tokenomics</h2>
-    <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-      SPID is built to ensure sustainability, incentivize participation, and reward contributors who keep the data
-      flowing.
-    </p>
+  <section id="tokenomics" class="py-24 px-6 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Tokenomics</h2>
+      <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+        SPID is built to ensure sustainability, incentivize participation, and reward contributors who keep the data
+        flowing.
+      </p>
 
-    <div class="max-w-7xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-10 text-blue-400 text-center">Token Distribution</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">40%</strong> — Ecosystem & Staking</p>
-        </div>
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">20%</strong> — Core Team</p>
-        </div>
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">15%</strong> — Strategic Partnerships</p>
-        </div>
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Public Sale</p>
-        </div>
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Treasury</p>
-        </div>
-        <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
-          <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">5%</strong> — Advisors</p>
+      <div class="max-w-7xl mx-auto px-4">
+        <h3 class="text-3xl font-semibold mb-10 text-blue-400 text-center">Token Distribution</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">40%</strong> — Ecosystem
+              & Staking</p>
+          </div>
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">20%</strong> — Core Team
+            </p>
+          </div>
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">15%</strong> — Strategic
+              Partnerships</p>
+          </div>
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Public
+              Sale</p>
+          </div>
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">10%</strong> — Treasury
+            </p>
+          </div>
+          <div
+            class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded text-center flex items-center justify-center shadow hover:shadow-blue-500 transition-all duration-300">
+            <p class="text-gray-300 text-lg font-medium"><strong class="text-blue-400 text-xl">5%</strong> — Advisors
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- Fund Allocation Section -->
-<section id="fund-allocation" class="py-24 px-6 bg-black text-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-semibold mb-10 text-blue-400">Fund Allocation</h2>
+  <section id="fund-allocation" class="py-24 px-6 bg-black text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-10 text-blue-400">Fund Allocation</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">50%</strong> — Development & Engineering</p>
-      </div>
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">20%</strong> — Research & Data Acquisition</p>
-      </div>
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">15%</strong> — Community & Growth</p>
-      </div>
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Infrastructure & Hosting</p>
-      </div>
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Reserves</p>
-      </div>
-      <div class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
-        <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Legal & Security</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">50%</strong> — Development & Engineering</p>
+        </div>
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">20%</strong> — Research & Data Acquisition</p>
+        </div>
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">15%</strong> — Community & Growth</p>
+        </div>
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Infrastructure & Hosting</p>
+        </div>
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Reserves</p>
+        </div>
+        <div
+          class="mx-auto w-80 h-32 bg-black border border-gray-700 p-6 rounded flex items-center justify-center text-center shadow hover:shadow-blue-500 transition-all duration-300">
+          <p class="text-gray-300"><strong class="text-blue-400">5%</strong> — Legal & Security</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- Roadmap Section -->
   <section id="roadmap" class="py-20 px-6 bg-black text-white">
     <div class="max-w-4xl mx-auto text-center">
@@ -332,125 +334,141 @@ details[open] > p {
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">FAQ</h2>
       <p class="text-lg text-gray-400 mb-12">Common questions about the SpaceID platform.</p>
       <div class="space-y-4 text-left">
-        <details class="border border-gray-700 p-4 rounded">
-          <summary class="font-semibold cursor-pointer text-white">How do I buy SPID?</summary>
-          <p class="text-gray-400 mt-2">SPID will be available on selected launchpads and later on decentralized
-            exchanges. Stay tuned to our updates.</p>
+
+        <details class="faq-item">
+          <summary>How do I buy SPID?</summary>
+          <div class="faq-content text-gray-400 mt-2">
+            SPID will be available on selected launchpads and later on decentralized exchanges. Stay tuned to our
+            updates.
+          </div>
         </details>
-        <details class="border border-gray-700 p-4 rounded">
-          <summary class="font-semibold cursor-pointer text-white">Is SPID a governance token?</summary>
-          <p class="text-gray-400 mt-2">Yes, SPID holders will vote on key protocol decisions, including data access
-            models and network upgrades.</p>
+
+        <details class="faq-item">
+          <summary>Is SPID a governance token?</summary>
+          <div class="faq-content text-gray-400 mt-2">
+            Yes, SPID holders will vote on key protocol decisions, including data access models and network upgrades.
+          </div>
         </details>
-        <details class="border border-gray-700 p-4 rounded">
-          <summary class="font-semibold cursor-pointer text-white">What data can I access?</summary>
-          <p class="text-gray-400 mt-2">You can access satellite imagery, telemetry, scientific readings and archived
-            mission reports.</p>
+
+        <details class="faq-item">
+          <summary>What data can I access?</summary>
+          <div class="faq-content text-gray-400 mt-2">
+            You can access satellite imagery, telemetry, scientific readings and archived mission reports.
+          </div>
         </details>
-        <details class="border border-gray-700 p-4 rounded">
-          <summary class="font-semibold cursor-pointer text-white">Do I need to stake SPID to access data?</summary>
-          <p class="text-gray-400 mt-2">Some datasets are free; others require staking or holding SPID depending on
-            size, bandwidth, or recency.</p>
+
+        <details class="faq-item">
+          <summary>Do I need to stake SPID to access data?</summary>
+          <div class="faq-content text-gray-400 mt-2">
+            Some datasets are free; others require staking or holding SPID depending on size, bandwidth, or recency.
+          </div>
         </details>
-        <details class="border border-gray-700 p-4 rounded">
-          <summary class="font-semibold cursor-pointer text-white">How secure is the platform?</summary>
-          <p class="text-gray-400 mt-2">All data is verified on-chain. Smart contracts are audited and stored
-            redundantly via IPFS and nodes.</p>
+
+        <details class="faq-item">
+          <summary>How secure is the platform?</summary>
+          <div class="faq-content text-gray-400 mt-2">
+            All data is verified on-chain. Smart contracts are audited and stored redundantly via IPFS and nodes.
+          </div>
         </details>
+
       </div>
     </div>
   </section>
+<!-- Footer -->
+<footer class="bg-black border-t border-gray-800 py-10 px-6 text-white text-sm">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
 
-  <!-- Footer -->
-  <footer class="bg-black border-t border-gray-800 py-10 px-6 text-white text-sm relative z-10">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-      <!-- Contact Form -->
+    <!-- Contact Form (left, compact, shifted) -->
+    <div class="w-full md:w-1/2 md:pl-8">
+      <h3 class="text-xl font-semibold mb-4 text-blue-400">Contact Us</h3>
+      <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3 w-full max-w-sm">
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white text-sm" />
+        <textarea name="message" placeholder="Your Message" required
+          class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white text-sm"></textarea>
+        <button type="submit"
+          class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition text-sm">
+          Send
+        </button>
+        <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
+      </form>
+    </div>
+
+    <!-- Navigation (right) -->
+    <div class="w-full md:w-1/2 flex flex-col justify-between">
       <div>
-  <h3 class="text-xl font-semibold mb-3 text-blue-400">Contact Us</h3>
-  <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3 max-w-md w-full">
-    <input type="email" name="email" placeholder="Your Email" required
-      class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white" />
-    <textarea name="message" placeholder="Your Message" required
-      class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white"></textarea>
-    <button type="submit"
-      class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition">
-      Send
-    </button>
-    <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
-  </form>
-</div>
-<!-- Links and Social -->
-<div class="text-center w-full">
-  <h3 class="text-xl font-semibold mb-3 text-blue-400">Navigation</h3>
-  <ul class="space-y-1">
-    <li><a href="#hero" class="hover:text-blue-400">Home</a></li>
-    <li><a href="#about" class="hover:text-blue-400">About</a></li>
-    <li><a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a></li>
-    <li><a href="#roadmap" class="hover:text-blue-400">Roadmap</a></li>
-    <li><a href="#team" class="hover:text-blue-400">Team</a></li>
-    <li><a href="#faq" class="hover:text-blue-400">FAQ</a></li>
-  </ul>
+        <h3 class="text-xl font-semibold mb-4 text-blue-400">Navigation</h3>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <a href="#hero" class="hover:text-blue-400">Home</a>
+          <a href="#about" class="hover:text-blue-400">About</a>
+          <a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a>
+          <a href="#roadmap" class="hover:text-blue-400">Roadmap</a>
+          <a href="#team" class="hover:text-blue-400">Team</a>
+          <a href="#faq" class="hover:text-blue-400">FAQ</a>
+        </div>
+      </div>
 
-  <div class="mt-4 space-x-3">
-    <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
-    <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
+        <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
+        <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
+        <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
+      </div>
+    </div>
   </div>
 
-  <div class="mt-3 space-x-3">
-    <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
-    <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
+  <!-- Copyright -->
+  <div class="mt-10 text-center text-gray-500">
+    © 2025 SpaceID (SPID). All rights reserved.
   </div>
-</div>
-    <!-- Центрированный копирайт -->
-<div class="mt-6 flex justify-center w-full col-span-full">
-  <p class="text-gray-500 text-sm text-center">© 2025 SpaceID (SPID). All rights reserved.</p>
-</div>
+</footer>
 
-    <!-- Scripts -->
-    <script>
-      // Contact Form
-      const form = document.getElementById('contact-form');
-      const msg = document.getElementById('success-msg');
+  <!-- Scripts -->
+  <script>
+    // Contact Form
+    const form = document.getElementById('contact-form');
+    const msg = document.getElementById('success-msg');
 
-      if (form) {
-        form.addEventListener('submit', async function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          try {
-            const res = await fetch(form.action, {
-              method: 'POST',
-              body: data,
-              headers: { 'Accept': 'application/json' }
-            });
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
 
-            if (res.ok) {
-              msg.classList.remove('hidden');
-              form.reset();
-            } else {
-              alert('There was a problem sending your message.');
-            }
-          } catch (err) {
-            alert('Failed to connect. Please try again.');
-          }
-        });
-      }
-
-      // Burger Menu
-      const toggleBtn = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const hero = document.getElementById('hero');
-
-      if (toggleBtn && mobileMenu && hero) {
-        toggleBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          // Move hero section down when menu is open
-          if (!mobileMenu.classList.contains('hidden')) {
-            hero.classList.add('mt-[360px]');
+          if (res.ok) {
+            msg.classList.remove('hidden');
+            form.reset();
           } else {
-            hero.classList.remove('mt-[360px]');
+            alert('There was a problem sending your message.');
           }
-        });
-      }
-    </script>
-</body> 
+        } catch (err) {
+          alert('Failed to connect. Please try again.');
+        }
+      });
+    }
+
+    // Burger Menu
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hero = document.getElementById('hero');
+
+    if (toggleBtn && mobileMenu && hero) {
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Move hero section down when menu is open
+        if (!mobileMenu.classList.contains('hidden')) {
+          hero.classList.add('mt-[360px]');
+        } else {
+          hero.classList.remove('mt-[360px]');
+        }
+      });
+    }
+  </script>
+</body>
+
 </html>
