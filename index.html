@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpaceID (SPID)</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -16,25 +15,46 @@
       height: 100%;
       z-index: -1;
     }
+
+  details summary {
+  cursor: pointer;
+}
+
+details[open] > p {
+  animation: fadeDown 0.5s ease-in-out;
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+  .card-animated {
+  opacity: 5;
+  transform: translateY(40px);
+  transition: all 0.13s ease-out;
+}
+.card-animated.visible {
+  opacity: 5;
+  transform: translateY(0);
+}
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   </style>
 </head>
 
 <body class="font-[Orbitron]">
-  <!-- Star Background -->
-  <div id="stars-bg"></div>
-  <script>
-    tsParticles.load("stars-bg", {
-      background: { color: "#000000" },
-      particles: {
-        number: { value: 120 },
-        size: { value: 1 },
-        color: { value: "#ffffff" },
-        move: { speed: 0.15 },
-        opacity: { value: 0.5 }
-      }
-    });
-  </script>
-
+  
   <!-- Mobile Navbar -->
   <div class="md:hidden fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
     <div class="flex items-center justify-between px-6 py-4">
@@ -60,7 +80,7 @@
   </div>
 
   <!-- Header for desktop -->
-  <header class="hidden md:block fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
+  <header class="hidden md:block static top-40 left-0 w-full z-70 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
       <h1 class="text-xl font-bold text-white tracking-widest">SPACEID</h1>
       <nav class="flex items-center space-x-6 text-base">
@@ -88,8 +108,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="pt-24 md:pt-32 text-center bg-black min-h-screen flex items-center justify-center">
-    <div class="max-w-3xl mx-auto">
+  <section id="hero" class="pt-16 md:pt-0 text-center bg-black min-h-screen flex items-center justify-center">
+  <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight text-blue-400">
         Real Space Data.<br>
         <span class="text-white">Accessible. Immutable. Yours.</span>
@@ -106,8 +126,8 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 px-6 bg-black text-white">
-    <div class="max-w-5xl mx-auto text-center">
+  <section id="about" class="py-12 px- bg-black text-white">
+  <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-blue-400">About the Project</h2>
       <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
         SpaceID provides decentralized access to space mission datasets, enabling innovation in science, research and
@@ -346,19 +366,19 @@
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
       <!-- Contact Form -->
       <div>
-        <h3 class="text-xl font-semibold mb-3 text-blue-400">Contact Us</h3>
-        <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3">
-          <input type="email" name="email" placeholder="Your Email" required
-            class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white" />
-          <textarea name="message" placeholder="Your Message" required
-            class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white"></textarea>
-          <button type="submit"
-            class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition">
-            Send
-          </button>
-          <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
-        </form>
-      </div>
+  <h3 class="text-xl font-semibold mb-3 text-blue-400">Contact Us</h3>
+  <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3 max-w-md w-full">
+    <input type="email" name="email" placeholder="Your Email" required
+      class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white" />
+    <textarea name="message" placeholder="Your Message" required
+      class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white"></textarea>
+    <button type="submit"
+      class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition">
+      Send
+    </button>
+    <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
+  </form>
+</div>
 <!-- Links and Social -->
 <div class="text-center w-full">
   <h3 class="text-xl font-semibold mb-3 text-blue-400">Navigation</h3>
@@ -377,7 +397,7 @@
   </div>
 
   <div class="mt-3 space-x-3">
-    <a href="/ privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
+    <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
     <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
   </div>
 </div>
