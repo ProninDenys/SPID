@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpaceID (SPID)</title>
+  <title>AstroNet (ASTN)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -41,16 +41,16 @@
 <body class="font-[Orbitron]">
 
   <!-- Mobile Navbar -->
-  <div class="md:hidden fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
+  <div class="md:hidden static top-0 left-0 w-full z-50 border-b border-gray-800">
     <div class="flex items-center justify-between px-6 py-4">
-      <h1 class="text-xl font-bold text-white tracking-widest">SPACEID</h1>
+      <h1 class="text-xl font-bold text-white tracking-widest">AstroNet</h1>
       <button id="menu-toggle" class="text-white focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden px-6 pb-4 space-y-3 bg-black text-white text-sm text-center">
+    <div id="mobile-menu" class="hidden px-6 pb-4 space-y-3 text-white text-sm text-center">
       <a href="#hero" class="block hover:text-blue-400">Home</a>
       <a href="#about" class="block hover:text-blue-400">About</a>
       <a href="#tokenomics" class="block hover:text-blue-400">Tokenomics</a>
@@ -64,42 +64,40 @@
     </div>
   </div>
   <!-- Header for desktop -->
-  <header class="hidden md:block w-full z-70 bg-black border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-      <h1 class="text-xl font-bold text-white tracking-widest">SPACEID</h1>
-      <nav class="flex items-center space-x-6 text-base">
-        <a href="#hero" class="text-gray-300 hover:text-blue-400 transition">Home</a>
-        <a href="#about" class="text-gray-300 hover:text-blue-400 transition">About</a>
-        <a href="#tokenomics" class="text-gray-300 hover:text-blue-400 transition">Tokenomics</a>
-        <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition">Roadmap</a>
-        <a href="#team" class="text-gray-300 hover:text-blue-400 transition">Team</a>
-        <a href="#faq" class="text-gray-300 hover:text-blue-400 transition">FAQ</a>
-        <a href="#whitepaper" class="text-gray-300 hover:text-blue-400 transition">Whitepaper</a>
-      </nav>
-      <div class="flex items-center space-x-4">
-        <a href="https://twitter.com/yourproject" target="_blank"
-          class="text-white hover:text-blue-400 transition text-sm font-medium">Twitter</a>
-        <a href="https://example.com/buy" target="_blank"
-          class="px-5 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
-          Buy Token
-        </a>
-        <a href="https://t.me/spaceidcommunity" target="_blank"
-          class="px-5 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
-          Join Community
-        </a>
-      </div>
+  <header class="hidden md:block w-full z-70 border-b border-gray-800">
+ <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <h1 class="text-xl font-bold text-white tracking-widest">AstroNet</h1>
+    <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm sm:text-base">
+      <a href="#hero" class="text-gray-300 hover:text-blue-400 transition px-2">Home</a>
+      <a href="#about" class="text-gray-300 hover:text-blue-400 transition px-2">About</a>
+      <a href="#tokenomics" class="text-gray-300 hover:text-blue-400 transition px-2">Tokenomics</a>
+      <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition px-2">Roadmap</a>
+      <a href="#team" class="text-gray-300 hover:text-blue-400 transition px-2">Team</a>
+      <a href="#faq" class="text-gray-300 hover:text-blue-400 transition px-2">FAQ</a>
+      <a href="#whitepaper" class="text-gray-300 hover:text-blue-400 transition px-2">Whitepaper</a>
+      <a href="https://twitter.com/yourproject" target="_blank" class="text-white hover:text-blue-400 transition px-2">Twitter</a>
+    </nav>
+    <div class="flex flex-wrap justify-center space-x-2 mt-2 sm:mt-0">
+      <a href="https://example.com/buy" target="_blank"
+        class="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
+        Buy Token
+      </a>
+      <a href="https://t.me/spaceidcommunity" target="_blank"
+        class="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
+        Join Community
+      </a>
     </div>
-  </header>
-
+  </div>
+</header>
   <!-- Hero Section -->
-  <section id="hero" class="bg-black py-16 text-center flex items-center justify-center">
+  <section id="hero" class="py-16 text-center flex items-center justify-center">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight text-blue-400">
         Real Space Data.<br>
         <span class="text-white">Accessible. Immutable. Yours.</span>
       </h2>
       <p class="text-gray-400 text-lg md:text-xl mb-8">
-        SpaceID makes public mission data universally accessible via blockchain. Search, analyze, build — without
+        AstroNet makes public mission data universally accessible via blockchain. Search, analyze, build — without
         limits.
       </p>
       <a href="#tokenomics"
@@ -110,11 +108,11 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="bg-black py-16 px-6 text-white">
+  <section id="about" class="py-16 px-6 text-white">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-blue-400">About the Project</h2>
       <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-        SpaceID provides decentralized access to space mission datasets, enabling innovation in science, research and
+        AstroNet provides decentralized access to space mission datasets, enabling innovation in science, research and
         open data systems.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
@@ -128,19 +126,19 @@
         <div>
           <h3 class="text-xl font-semibold mb-4 text-white">The Solution</h3>
           <p class="text-gray-300">
-            SpaceID creates a unified, blockchain-powered protocol for structured, permissionless access to historical
-            and live mission data. Powered by SPID token, it enables indexing, staking, and global participation.
+            AstroNet creates a unified, blockchain-powered protocol for structured, permissionless access to historical
+            and live mission data. Powered by ASTN token, it enables indexing, staking, and global participation.
           </p>
         </div>
       </div>
     </div>
   </section>
   <!-- Tokenomics Section -->
-  <section id="tokenomics" class="py-24 px-6 bg-gray-900 text-white">
+  <section id="tokenomics" class="py-24 px-6 text-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Tokenomics</h2>
       <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-        SPID is built to ensure sustainability, incentivize participation, and reward contributors who keep the data
+        ASTN is built to ensure sustainability, incentivize participation, and reward contributors who keep the data
         flowing.
       </p>
 
@@ -182,7 +180,7 @@
     </div>
   </section>
   <!-- Fund Allocation Section -->
-  <section id="fund-allocation" class="py-24 px-6 bg-black text-white">
+  <section id="fund-allocation" class="py-24 px-6 text-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-10 text-blue-400">Fund Allocation</h2>
 
@@ -215,7 +213,7 @@
     </div>
   </section>
   <!-- Roadmap Section -->
-  <section id="roadmap" class="py-20 px-6 bg-black text-white">
+  <section id="roadmap" class="py-20 px-6 text-white">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Roadmap</h2>
       <p class="text-lg text-gray-400 mb-12">
@@ -242,7 +240,7 @@
     </div>
   </section>
   <!-- Team Section -->
-  <section id="team" class="py-20 px-6 bg-gray-900 text-white">
+  <section id="team" class="py-20 px-6 text-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Team</h2>
       <p class="text-lg text-gray-400 mb-12">
@@ -277,11 +275,11 @@
     </div>
   </section>
   <!-- Whitepaper CTA Section -->
-  <section id="whitepaper" class="py-20 px-6 bg-gray-900 text-white text-center">
+  <section id="whitepaper" class="py-20 px-6 text-white text-center">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Whitepaper</h2>
       <p class="text-lg text-gray-400 mb-8">
-        Read the full technical overview of the SpaceID protocol, architecture, and token model.
+        Read the full technical overview of the AstroNet protocol, architecture, and token model.
       </p>
       <a href="https://example.com/whitepaper.pdf" target="_blank"
         class="inline-block px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition">
@@ -291,11 +289,11 @@
   </section>
 
   <!-- Open Data Inspiration Section -->
-  <section id="inspiration" class="py-20 px-6 bg-black text-white">
+  <section id="inspiration" class="py-20 px-6 text-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">Supported by Open Missions</h2>
       <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
-        SpaceID is inspired by the open data ecosystems and standards pioneered by the following organizations.
+        AstroNet is inspired by the open data ecosystems and standards pioneered by the following organizations.
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
         <a href="https://nasa.gov" target="_blank" aria-label="NASA">
@@ -329,24 +327,24 @@
   </section>
 
   <!-- FAQ Section -->
-  <section id="faq" class="py-20 px-6 bg-black text-white">
+  <section id="faq" class="py-20 px-6 text-white">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-blue-400">FAQ</h2>
-      <p class="text-lg text-gray-400 mb-12">Common questions about the SpaceID platform.</p>
+      <p class="text-lg text-gray-400 mb-12">Common questions about the AstroNet platform.</p>
       <div class="space-y-4 text-left">
 
         <details class="faq-item">
-          <summary>How do I buy SPID?</summary>
+          <summary>How do I buy ASTN?</summary>
           <div class="faq-content text-gray-400 mt-2">
-            SPID will be available on selected launchpads and later on decentralized exchanges. Stay tuned to our
+            ASTN will be available on selected launchpads and later on decentralized exchanges. Stay tuned to our
             updates.
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>Is SPID a governance token?</summary>
+          <summary>Is ASTN a governance token?</summary>
           <div class="faq-content text-gray-400 mt-2">
-            Yes, SPID holders will vote on key protocol decisions, including data access models and network upgrades.
+            Yes, ASTN holders will vote on key protocol decisions, including data access models and network upgrades.
           </div>
         </details>
 
@@ -358,9 +356,9 @@
         </details>
 
         <details class="faq-item">
-          <summary>Do I need to stake SPID to access data?</summary>
+          <summary>Do I need to stake ASTN to access data?</summary>
           <div class="faq-content text-gray-400 mt-2">
-            Some datasets are free; others require staking or holding SPID depending on size, bandwidth, or recency.
+            Some datasets are free; others require staking or holding ASTN depending on size, bandwidth, or recency.
           </div>
         </details>
 
@@ -374,54 +372,55 @@
       </div>
     </div>
   </section>
-<!-- Footer -->
-<footer class="bg-black border-t border-gray-800 py-10 px-6 text-white text-sm">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-10 px-6 text-white text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
 
-    <!-- Contact Form (left, compact, shifted) -->
-    <div class="w-full md:w-1/2 md:pl-8">
-      <h3 class="text-xl font-semibold mb-4 text-blue-400">Contact Us</h3>
-      <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST" class="space-y-3 w-full max-w-sm">
-        <input type="email" name="email" placeholder="Your Email" required
-          class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white text-sm" />
-        <textarea name="message" placeholder="Your Message" required
-          class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white text-sm"></textarea>
-        <button type="submit"
-          class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition text-sm">
-          Send
-        </button>
-        <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
-      </form>
-    </div>
+      <!-- Contact Form (left, compact, shifted) -->
+      <div class="w-full md:w-1/2 md:pl-8">
+        <h3 class="text-xl font-semibold mb-4 text-blue-400">Contact Us</h3>
+        <form id="contact-form" action="https://formspree.io/f/your-real-form-id" method="POST"
+          class="space-y-3 w-full max-w-sm">
+          <input type="email" name="email" placeholder="Your Email" required
+            class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-white text-sm" />
+          <textarea name="message" placeholder="Your Message" required
+            class="w-full p-2 bg-gray-900 border border-gray-700 rounded h-24 text-white text-sm"></textarea>
+          <button type="submit"
+            class="bg-white text-black font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white transition text-sm">
+            Send
+          </button>
+          <p id="success-msg" class="text-green-400 mt-2 hidden">Message sent successfully!</p>
+        </form>
+      </div>
 
-    <!-- Navigation (right) -->
-    <div class="w-full md:w-1/2 flex flex-col justify-between">
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Navigation</h3>
-        <div class="flex flex-wrap gap-x-6 gap-y-2">
-          <a href="#hero" class="hover:text-blue-400">Home</a>
-          <a href="#about" class="hover:text-blue-400">About</a>
-          <a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a>
-          <a href="#roadmap" class="hover:text-blue-400">Roadmap</a>
-          <a href="#team" class="hover:text-blue-400">Team</a>
-          <a href="#faq" class="hover:text-blue-400">FAQ</a>
+      <!-- Navigation (right) -->
+      <div class="w-full md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-blue-400">Navigation</h3>
+          <div class="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="#hero" class="hover:text-blue-400">Home</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#tokenomics" class="hover:text-blue-400">Tokenomics</a>
+            <a href="#roadmap" class="hover:text-blue-400">Roadmap</a>
+            <a href="#team" class="hover:text-blue-400">Team</a>
+            <a href="#faq" class="hover:text-blue-400">FAQ</a>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
+          <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
+          <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
         </div>
       </div>
-
-      <div class="mt-6 flex flex-wrap gap-4">
-        <a href="https://twitter.com/yourproject" target="_blank" class="hover:text-blue-400">Twitter</a>
-        <a href="https://t.me/yourproject" target="_blank" class="hover:text-blue-400">Telegram</a>
-        <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy Policy</a>
-        <a href="/terms.html" class="hover:text-blue-400">Terms of Use</a>
-      </div>
     </div>
-  </div>
 
-  <!-- Copyright -->
-  <div class="mt-10 text-center text-gray-500">
-    © 2025 SpaceID (SPID). All rights reserved.
-  </div>
-</footer>
+    <!-- Copyright -->
+    <div class="mt-10 text-center text-gray-500">
+      © 2025 AstroNet (ASTN). All rights reserved.
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script>
@@ -462,7 +461,6 @@
         mobileMenu.classList.toggle('hidden');
         // Move hero section down when menu is open
         if (!mobileMenu.classList.contains('hidden')) {
-          hero.classList.add('mt-[360px]');
         } else {
           hero.classList.remove('mt-[360px]');
         }
