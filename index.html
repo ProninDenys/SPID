@@ -60,7 +60,7 @@
       <a href="#faq" class="block hover:text-blue-400">FAQ</a>
       <a href="#whitepaper" class="block hover:text-blue-400">Whitepaper</a>
       <a href="https://x.com/ASTNproject" target="_blank" class="block hover:text-blue-400">Twitter</a>
-      <a href="https://example.com/buy" target="_blank" class="block hover:text-blue-400">Buy Token</a>
+      <button onclick="addToken()" class="block hover:text-blue-400 text-left w-full">Buy Token</button>
       <a href="https://t.me/ASTNproject" target="_blank" class="block hover:text-blue-400">Join Community</a>
     </div>
   </div>
@@ -79,10 +79,10 @@
       <a href="https://x.com/ASTNproject" target="_blank" class="text-white hover:text-blue-400 transition px-2">Twitter</a>
     </nav>
     <div class="flex flex-wrap justify-center space-x-2 mt-2 sm:mt-0">
-      <a href="https://example.com/buy" target="_blank"
-        class="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
-        Buy Token
-      </a>
+      <button onclick="addToken()"
+   class="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
+  Buy Token
+</button>
       <a href="https://t.me/ASTNproject" target="_blank"
    class="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-sm">
    Join Community
@@ -468,6 +468,34 @@
       });
     }
   </script>
+
+  <script>
+  async function addToken() {
+    try {
+      const wasAdded = await window.ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+          type: 'ERC20',
+          options: {
+            address: '0xbe05C549283020689df5Ac683668A65D5A304002', // твой контракт ASTN
+            symbol: 'ASTN',
+            decimals: 18,
+            image: 'img/rocket.png' // можешь заменить на иконку ASTN
+          },
+        },
+      });
+
+      if (wasAdded) {
+        alert('ASTN token added to MetaMask!');
+      } else {
+        alert('Token addition was canceled.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('MetaMask not available or request rejected.');
+    }
+  }
+</script>
 </body>
 
 </html>
