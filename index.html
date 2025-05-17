@@ -481,30 +481,30 @@
 
   <script>
     async function addToken() {
-      try {
-        const wasAdded = await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: '0xbe05C549283020689df5Ac683668A65D5A304002', 
-              symbol: 'ASTN',
-              decimals: 18,
-              image: 'img/rocket.png' 
-            },
-          },
-        });
+  try {
+    const wasAdded = await window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: '0xbe05C549283020689df5Ac683668A65D5A304002', 
+          symbol: 'ATN', // ← Обновили
+          decimals: 18,
+          image: 'img/rocket.png'
+        },
+      },
+    });
 
-        if (wasAdded) {
-          alert('ASTN token added to MetaMask!');
-        } else {
-          alert('Token addition was canceled.');
-        }
-      } catch (error) {
-        console.error(error);
-        alert('MetaMask not available or request rejected.');
-      }
+    if (wasAdded) {
+      alert('ATN token added to MetaMask!');
+    } else {
+      alert('Token addition was canceled.');
     }
+  } catch (error) {
+    console.error(error);
+    alert('MetaMask not available or request rejected.');
+  }
+}
   </script>
 </body>
 
